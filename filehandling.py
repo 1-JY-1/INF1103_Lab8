@@ -1,6 +1,6 @@
 import json
 
-class filehandling:
+class FileHandling:
     def __init__(self):
         self.productdetail = {"products": []}
 

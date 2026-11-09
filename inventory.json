@@ -10,43 +10,11 @@
         },
         {
             "ID": 2,
-            "type": "physical",
-            "name": "Laptop",
-            "price": 1000,
-            "stock": 25,
-            "weight": 2.5
-        },
-        {
-            "ID": 3,
             "type": "digital",
             "name": "Software",
             "price": 1000,
             "stock": 10,
             "download_size": 5000
-        },
-        {
-            "ID": 4,
-            "type": "physical",
-            "name": "Dice",
-            "price": 20.0,
-            "stock": 100,
-            "weight": 0.5
-        },
-        {
-            "ID": 5,
-            "type": "physical",
-            "name": "Fan",
-            "price": 20.0,
-            "stock": 100,
-            "weight": 2.0
-        },
-        {
-            "ID": 6,
-            "type": "physical",
-            "name": "Mic",
-            "price": 100.0,
-            "stock": 10,
-            "weight": 0.1
         }
     ]
 }
