@@ -2,7 +2,6 @@ from abc import ABC, abstractmethod
 
 from canbeshipped import CanBeShipped
 from supplier import Supplier
-import supplier
 
 class Product(ABC):
     def __init__(self, id:str, name:str, price:float, stock:int, supplier: Supplier):

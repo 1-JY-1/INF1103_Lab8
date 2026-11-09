@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
 
-
-
 class CanBeShipped(ABC):
 
     @abstractmethod

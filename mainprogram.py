@@ -1,5 +1,3 @@
-from filehandling import FileHandling
-
 from inventory import Inventory
 from product import Product, physicalProduct, digitalProduct
 from supplier import Supplier
@@ -7,13 +5,9 @@ from supplier import Supplier
 from order import Order
 # from orderline import OrderLine
 
-
-
-
 Supplier1 = Supplier("S001", "Supplier 1", "Supplier1@supplier1.com")
 Supplier2 = Supplier("S002", "Supplier 2", "Supplier2@supplier2.com")
 Supplier3 = Supplier("S003", "Supplier 3", "Supplier3@supplier3.com")
-
 
 physicalProduct1 = physicalProduct("P001", "physical", "Phone", 1000, 10, 1.5, supplier=Supplier1)
 digitalProduct1 = digitalProduct("P002", "digital", "Software", 1000, 10, 5000, supplier=Supplier2)
@@ -23,7 +17,6 @@ print("\n====== Print deleted Supplier3 from delsupplierproduct ======")
 del Supplier3
 delsupplierproduct.display_supplier()
 print("============================================================")
-
 
 inventory1 = Inventory()
 inventory2 = Inventory()
@@ -36,14 +29,9 @@ print("\n========= Print deleted product from inventory1 ============")
 physicalProduct1.display_information() # after removing the product it still can show its info, so it is aggregate 
 print("============================================================")
 
-
 for product in inventory1.products:
     product.display_information()
     product.get_fulfilment_info()
-
-
-
-
 
 print("\n============= Print product inside inventory1 ==============")
 inventory1.display_all_products()
