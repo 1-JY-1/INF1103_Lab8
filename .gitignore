@@ -15,3 +15,6 @@ venv/
 
 # Ignore all Json files
 *.json
+
+# Ignore all docx files
+*.docx
