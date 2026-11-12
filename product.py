@@ -37,15 +37,10 @@ class Product(ABC):
             print("\nStock updated successfully.")
             print(f"Stock for product ID {self.id} updated to {new_stock}.\n")
             return
-        
+    
         except ValueError:
             print("Invalid input. Please enter a valid stock quantity.")
             return
-
-
-
-
-        pass
 
 
 class physicalProduct(Product, CanBeShipped):
@@ -58,16 +53,18 @@ class physicalProduct(Product, CanBeShipped):
         shipping_cost = self.weight * 5
         return shipping_cost
 
+    def display_supplier(self) -> None:
+        self.supplier.display_information()
+
     def display_information(self):
         super().display_information()
         print(f"Weight: {self.weight:.2f} kg")
         print(f"Shipping Cost: ${self.calculate_shipping_cost():.2f}")
+        self.display_supplier()
 
     def get_fulfilment_info(self):
         print("This product requires delivered physically.")
 
-    def display_supplier(self) -> None:
-        self.supplier.display_information()
 
 
 class digitalProduct(Product):
@@ -76,9 +73,13 @@ class digitalProduct(Product):
         self.download_size = download_size
         self.type = type
 
+    def display_supplier(self) -> None:
+        self.supplier.display_information()
+
     def display_information(self):
         super().display_information()
         print(f"Download Size: {self.download_size} MB")
+        self.display_supplier()
 
     def get_fulfilment_info(self):
         print("This product is delivered digitally.") 
